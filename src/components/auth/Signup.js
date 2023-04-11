@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
     const {f_name, l_name, email, password, c_password, phone_no} = user;
 
-    const res = await fetch("https://portfolio-backend-hazel.vercel.app/user/register",{
+    const res = await fetch("/user/register",{
       method: "POST",
       headers:{
         "Content-Type": "application/json" 

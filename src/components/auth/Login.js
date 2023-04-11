@@ -16,7 +16,7 @@ const Login = () => {
   const userLogin = async(e)=>{
     e.preventDefault();
 
-    const res = await fetch("https://portfolio-backend-hazel.vercel.app/user/login",{
+    const res = await fetch("/user/login",{
       method:"POST",
       headers:{
         "Content-Type": "application/json",

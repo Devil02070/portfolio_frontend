@@ -6,7 +6,7 @@ const Members = () => {
   const [userprofile, setUserProfile] = useState([]);
   
   const get_members = async()=>{
-    const res = await fetch('https://portfolio-backend-hazel.vercel.app/view_users', {
+    const res = await fetch('/view_users', {
       method : "GET",
       headers : {
         Accept: "Application/json",

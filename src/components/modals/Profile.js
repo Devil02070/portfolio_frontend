@@ -84,7 +84,7 @@ const Profile = (props) => {
     e.preventDefault();
     const { username, profession, user_desc, address, mobile_no, email } = profile;
     console.log(profile);
-    const res = await fetch(`https://portfolio-backend-hazel.vercel.app/edit_profile/${c_user}`, {
+    const res = await fetch(`/edit_profile/${c_user}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",
@@ -112,7 +112,7 @@ const Profile = (props) => {
     formdata.append("pj_name", pj_name);
     formdata.append("pj_desc", pj_desc);
     formdata.append("pj_link", pj_link);
-    const res = await axios.post(`https://portfolio-backend-hazel.vercel.app/add_project/${c_user}`, formdata, {
+    const res = await axios.post(`/add_project/${c_user}`, formdata, {
       headers:{
         "Content-type": "multipart/fprm-data"
       }
@@ -129,7 +129,7 @@ const Profile = (props) => {
     e.preventDefault();
     try {
       const { sk_name, sk_pctage, sk_desc } = skills;
-      const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_skills/${c_user}`, {
+      const res = await fetch(`/add_skills/${c_user}`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json"
@@ -153,7 +153,7 @@ const Profile = (props) => {
     try {
       const { work_type, work_name, work_desc } = work;
       // console.log(work)
-      const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_work/${c_user}`, {
+      const res = await fetch(`/add_work/${c_user}`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json"
@@ -176,7 +176,7 @@ const Profile = (props) => {
     e.preventDefault();
     try {
       const { qlf_type, qlf_in, qlf_from, qlf_pctage } = qualification;
-      const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_qualification/${c_user}`, {
+      const res = await fetch(`/add_qualification/${c_user}`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json"
@@ -199,7 +199,7 @@ const Profile = (props) => {
     e.preventDefault()
     try {
       const { exp_time, exp_department, exp_company, exp_role } = experience;
-      const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_experience/${c_user}`, {
+      const res = await fetch(`/add_experience/${c_user}`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json"
@@ -222,7 +222,7 @@ const Profile = (props) => {
     e.preventDefault();
     try{
       console.log(social);
-      const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/social_links/${c_user}`, social);
+      const res = await axios.patch(`/social_links/${c_user}`, social);
       if (res.status === 201 || res.status === 200) {
         setMessage({ ...message, social: "Changes Saved successfully" })
       } else {
@@ -243,7 +243,7 @@ const Profile = (props) => {
 
     console.log(formdata);  // returns empty object why
     try {
-      const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/uploadfile/${c_user}`, formdata, {
+      const res = await axios.patch(`/uploadfile/${c_user}`, formdata, {
         headers:{
           "Content-type":"multipart/form-data"
         },

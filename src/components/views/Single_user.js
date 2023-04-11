@@ -23,7 +23,7 @@ const SingleUser = () => {
 
   const Single_user = async () => {
     try {
-      const res = await fetch(`https://portfolio-backend-hazel.vercel.app/user/${id}`, {
+      const res = await fetch(`/user/${id}`, {
         method: "GET",
         headers: {
           Accept: "Application/json",

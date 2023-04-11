@@ -9,7 +9,7 @@ const Logout = () => {
     const navigate = useNavigate();
 
     const Logout_user = async()=>{
-      const res = await fetch('https://portfolio-backend-hazel.vercel.app/logout',{
+      const res = await fetch('/logout',{
         method:"GET",
         headers:{
           Accept: "application/json",
