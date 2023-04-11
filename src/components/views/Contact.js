@@ -13,7 +13,7 @@ const Contact = () => {
 
   const contactPage = async()=>{
     try{
-      const res = await fetch("/contact",{
+      const res = await fetch("https://portfolio-backend-hazel.vercel.app/contact",{
         method:"GET",
         headers:{
           Accept:"application/json",

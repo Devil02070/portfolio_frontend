@@ -23,7 +23,7 @@ const About = () => {
   const aboutPage = async () => {
     try {
       // fetch api
-      const res = await fetch("/aboutme", {
+      const res = await fetch("https://portfolio-backend-hazel.vercel.app/aboutme", {
         method: "GET",
         headers: {
           Accept: "application/json",
