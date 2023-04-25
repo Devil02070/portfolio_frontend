@@ -23,7 +23,7 @@ const About = () => {
   const aboutPage = async () => {
     try {
       // fetch api
-      const res = await fetch("/aboutme", {
+      const res = await fetch("https://portfolio-backend-hazel.vercel.app/aboutme", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -66,7 +66,7 @@ const About = () => {
     console.log(user_id);
     console.log(project_id);
     try {
-      const res = await axios.delete(`/delete_project/${user_id}/${project_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_project/${user_id}/${project_id}`);
       if (res.status === 200) { alert("Project card Deleted successfully") }
     } catch (e) {
       console.log(e);
@@ -75,7 +75,7 @@ const About = () => {
   // Delete Skill
   const deleteSkill = async (user_id, skill_id) => {
     try {
-      const res = await axios.delete(`/delete_skill/${user_id}/${skill_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_skill/${user_id}/${skill_id}`);
       if (res.status === 200) { alert("Skill card Deleted successfully") }
     } catch (e) {
       console.log(e);
@@ -84,7 +84,7 @@ const About = () => {
   // Delete Skill
   const deleteWork = async (user_id, work_id) => {
     try{
-      const res = await axios.delete(`/delete_work/${user_id}/${work_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_work/${user_id}/${work_id}`);
       if(res.status === 200){alert("Skill card Deleted successfully")}
     }catch(e){
       console.log(e);
