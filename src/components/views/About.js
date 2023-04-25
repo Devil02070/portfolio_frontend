@@ -33,10 +33,11 @@ const About = () => {
       });
 
       const data = await res.json();
+      console.log(data);
       // get response
       if (res.status !== 200 || !data) {
-        localStorage.removeItem('user_login');
-        navigate('/login');
+        // localStorage.removeItem('user_login');
+        // navigate('/login');
 
       } else {
         // console.log(data);
