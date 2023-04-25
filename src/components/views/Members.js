@@ -17,6 +17,7 @@ const Members = () => {
 
     const data = await res.json();
     console.log(data);
+    console.log('hello');
     setUser(data.all_users);
     setUserProfile(data.single_user_details);
   }
