@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const Members = () => {
   const [user, setUser] = useState([]);
   const [userprofile, setUserProfile] = useState([]);
-  
+  console.log('hello');
   const get_members = async()=>{
     const res = await fetch('https://portfolio-backend-hazel.vercel.app/view_users', {
       method : "GET",
@@ -17,7 +17,7 @@ const Members = () => {
 
     const data = await res.json();
     console.log(data);
-    console.log('hello');
+    
     setUser(data.all_users);
     setUserProfile(data.single_user_details);
   }
