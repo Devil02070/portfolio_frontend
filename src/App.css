@@ -26,8 +26,8 @@ div[class*="kursor"].kursor--4 {
 	border: 1px solid #ffffff !important;
 }
 div[class*="kursor"].kursor--4 {
-	width: 130px;
-	height: 130px;
+	width: 65px;
+	height: 65px;
 }
 
 /* Hovering */

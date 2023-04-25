@@ -38,7 +38,6 @@ const About = () => {
       if (res.status !== 200 || !data) {
         // localStorage.removeItem('user_login');
         // navigate('/login');
-
       } else {
         // console.log(data);
         setC_user(data.single_user_data[0]['_id']);
