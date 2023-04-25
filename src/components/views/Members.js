@@ -7,11 +7,11 @@ const Members = () => {
   console.log('hello');
   const get_members = async()=>{
     const res = await fetch('https://portfolio-backend-hazel.vercel.app/view_users', {
-      method : "GET",
-      headers : {
-        Accept: "Application/json",
-        "Content-Type": "application/json"
-      },
+      // method : "GET",
+      // headers : {
+      //   Accept: "Application/json",
+      //   "Content-Type": "application/json"
+      // },
       credentials: "include"
     })
 
