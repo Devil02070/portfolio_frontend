@@ -33,12 +33,12 @@ const Login = () => {
     }else{
       // dispatch({type:'USER', payload:true})
       console.log('user logged in');
-      console.log(data);
-      console.log(data.user_tc)
-      // navigate("/");
+      // console.log(data);
+      // console.log(data.user_tc)
+      navigate("/");
       document.cookie = `user=${data.user_tc}; path=/`;
       localStorage.setItem('user_login', true);
-      // window.location.reload();
+      window.location.reload();
     }
   }
 
