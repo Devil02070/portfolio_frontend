@@ -4,6 +4,9 @@ import {Link} from 'react-router-dom'
 const Members = () => {
   const [user, setUser] = useState([]);
   const [userprofile, setUserProfile] = useState([]);
+
+  const [isLoading, setIsLoading] = useState(true);
+
   console.log('hello');
   const get_members = async()=>{
     const res = await fetch('https://portfolio-backend-hazel.vercel.app/view_users', {
@@ -20,6 +23,7 @@ const Members = () => {
     
     setUser(data.all_users);
     setUserProfile(data.single_user_details);
+    setIsLoading(false);
   }
   useEffect(()=>{
     get_members();
@@ -27,6 +31,15 @@ const Members = () => {
 
   return (
     <>
+    <div>
+      {isLoading ? (
+        // Display the loader while the content is loading
+        <div className="loader">Loading...</div>
+      ) : (
+        // Display the content once it's loaded
+        <div>This is the content of my component.</div>
+      )}
+    </div>
     <section className='members'>
       <div className="container">
         <h3 className='rounded'>Users Having portfolio:</h3>
