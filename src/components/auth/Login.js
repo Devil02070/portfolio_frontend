@@ -34,7 +34,7 @@ const Login = () => {
       console.log('user logged in');
       console.log(data);
       // navigate("/");
-      // localStorage.setItem('user_login', true);
+      localStorage.setItem('user_login', true);
       // window.location.reload();
     }
   }
