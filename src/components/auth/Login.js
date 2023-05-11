@@ -34,6 +34,7 @@ const Login = () => {
       // dispatch({type:'USER', payload:true})
       console.log('user logged in');
       console.log(data);
+      console.log(data.user_tc)
       // navigate("/");
       const cookie = document.cookie; // Access the cookie
       console.log(cookie);
