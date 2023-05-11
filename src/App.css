@@ -152,10 +152,10 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 }
 
 
-.loading-screen{position:fixed; height:100vh; top:0px;z-index:99999999;background:#121212;width:100%}
+.loading-screen{position:fixed; height:100vh; top:0px;z-index:99999999;background:#121212;width:100%;display:flex; align-items:center;justify-content:center}
 .loader {
-	border: 16px solid #f3f3f3;
-	border-top: 16px solid #3498db;
+	border: 16px solid #ffffff;
+	border-top: 16px solid #752296;
 	border-radius: 50%;
 	width: 120px;
 	height: 120px;

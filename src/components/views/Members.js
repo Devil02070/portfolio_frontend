@@ -23,7 +23,7 @@ const Members = () => {
 
     setUser(data.all_users);
     setUserProfile(data.single_user_details);
-    // setIsLoading(false);
+    setIsLoading(false);
   }
   useEffect(() => {
     get_members();
@@ -35,7 +35,11 @@ const Members = () => {
         // Display the loader while the content is loading
         <>
           <seciton className="loading-screen">
-            <div className="loader"><p className='loader-text text-light'>Loading...</p></div>
+            <div className='vector'>
+              <div className="loader"></div>
+              <p className='loader-text text-light pt-3'>Loading...</p>
+            </div>
+            
           </seciton>
         </>
       ) : (
