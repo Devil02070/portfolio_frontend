@@ -21,6 +21,7 @@ const Login = () => {
       headers:{
         "Content-Type": "application/json",
       },
+      credentials: 'include',
       body: JSON.stringify({email, password})
     })
     const data = await res.json();
@@ -34,6 +35,8 @@ const Login = () => {
       console.log('user logged in');
       console.log(data);
       // navigate("/");
+      const cookie = document.cookie; // Access the cookie
+      console.log(cookie);
       localStorage.setItem('user_login', true);
       // window.location.reload();
     }
