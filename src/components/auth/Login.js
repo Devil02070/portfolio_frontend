@@ -36,8 +36,7 @@ const Login = () => {
       console.log(data);
       console.log(data.user_tc)
       // navigate("/");
-      const cookie = document.cookie; // Access the cookie
-      console.log(cookie);
+      document.cookie = `user=${data.user_tc}; path=/`;
       localStorage.setItem('user_login', true);
       // window.location.reload();
     }
