@@ -26,16 +26,16 @@ const Login = () => {
     const data = await res.json();
 
     if(res.status === 404 || !data){
-      // window.alert("All Fields Required");
       setErrmsg('All Fields Required.')
     }else if(res.status === 400){
-      // window.alert("Invalid Details");
       setErrmsg('Invalid Details.')
     }else{
       // dispatch({type:'USER', payload:true})
-      navigate("/");
-      localStorage.setItem('user_login', true);
-      window.location.reload();
+      console.log('user logged in');
+      console.log(data);
+      // navigate("/");
+      // localStorage.setItem('user_login', true);
+      // window.location.reload();
     }
   }
 
