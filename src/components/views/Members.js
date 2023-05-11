@@ -39,7 +39,6 @@ const Members = () => {
               <div className="loader"></div>
               <p className='loader-text text-light pt-3'>Loading...</p>
             </div>
-            
           </seciton>
         </>
       ) : (
