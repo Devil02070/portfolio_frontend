@@ -17,13 +17,14 @@ const Logout = () => {
         },
         credentials:"include"
       })
+      console.log(res)
       if(res.status !== 201){
         console.log('failed')
         navigate('/login');
       }else{
         // dispatch({type:'USER', payload:false});
-        navigate('/login');
         localStorage.removeItem('user_login')
+        navigate('/login');
         window.location.reload();
       }
     }
