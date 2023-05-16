@@ -40,8 +40,8 @@ const About = () => {
       console.log(data);
       // get response
       if (res.status !== 200 || !data) {
-        // localStorage.removeItem('user_login');
-        // navigate('/login');
+        localStorage.removeItem('user_login');
+        navigate('/login');
       } else {
         // console.log(data);
         setC_user(data.single_user_data[0]['_id']);
