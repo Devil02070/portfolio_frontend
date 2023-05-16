@@ -66,12 +66,13 @@ const About = () => {
     aboutPage();
   }, [])
 
+  const token = localStorage.getItem('user_token')
   // Delete project
   const deleteProject = async (user_id, project_id) => {
     console.log(user_id);
     console.log(project_id);
     try {
-      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_project/${user_id}/${project_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_project/${user_id}/${project_id}`, { headers: { Authorization: `Bearer ${token}` }});
       if (res.status === 200) { alert("Project card Deleted successfully") }
     } catch (e) {
       console.log(e);
@@ -80,7 +81,7 @@ const About = () => {
   // Delete Skill
   const deleteSkill = async (user_id, skill_id) => {
     try {
-      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_skill/${user_id}/${skill_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_skill/${user_id}/${skill_id}`, { headers: { Authorization: `Bearer ${token}` }});
       if (res.status === 200) { alert("Skill card Deleted successfully") }
     } catch (e) {
       console.log(e);
@@ -89,7 +90,7 @@ const About = () => {
   // Delete Skill
   const deleteWork = async (user_id, work_id) => {
     try {
-      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_work/${user_id}/${work_id}`);
+      const res = await axios.delete(`https://portfolio-backend-hazel.vercel.app/delete_work/${user_id}/${work_id}`, { headers: { Authorization: `Bearer ${token}` }});
       if (res.status === 200) { alert("Skill card Deleted successfully") }
     } catch (e) {
       console.log(e);

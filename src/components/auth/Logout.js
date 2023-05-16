@@ -5,11 +5,13 @@ const Logout = () => {
     const navigate = useNavigate();
 
     const Logout_user = async()=>{
+      const token = localStorage.getItem('user_token');
       const res = await fetch('https://portfolio-backend-hazel.vercel.app/logout',{
         method:"GET",
         headers:{
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
         },
         credentials:"include"
       })
@@ -19,7 +21,7 @@ const Logout = () => {
         navigate('/login');
       }else{
         localStorage.removeItem('user_login')
-        localStorage.removeItem('usre_token')
+        localStorage.removeItem('user_token')
         navigate('/login');
         window.location.reload();
       }

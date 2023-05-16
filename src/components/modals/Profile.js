@@ -79,6 +79,8 @@ const Profile = (props) => {
     setSocial({...social, [field]:value});
   }
 
+  const token = localStorage.getItem('user_token');
+
   //_________Profile______________________________________
   const editProfile = async (e) => {
     e.preventDefault();
@@ -88,7 +90,8 @@ const Profile = (props) => {
       method: "PATCH",
       headers: {
         Accept: "application/json",
-        "Content-Type": "Application/json"
+        "Content-Type": "Application/json",
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         username, profession, user_desc, address, mobile_no, email
@@ -114,7 +117,8 @@ const Profile = (props) => {
     formdata.append("pj_link", pj_link);
     const res = await axios.post(`https://portfolio-backend-hazel.vercel.app/add_project/${c_user}`, formdata, {
       headers:{
-        "Content-type": "multipart/fprm-data"
+        "Content-type": "multipart/fprm-data",
+        Authorization: `Bearer ${token}`
       }
     });
     if (res.status === 200) {
@@ -132,7 +136,8 @@ const Profile = (props) => {
       const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_skills/${c_user}`, {
         method: "POST",
         headers: {
-          "Content-Type": "Application/json"
+          "Content-Type": "Application/json",
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ sk_name, sk_pctage, sk_desc })
       })
@@ -156,7 +161,8 @@ const Profile = (props) => {
       const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_work/${c_user}`, {
         method: "POST",
         headers: {
-          "Content-Type": "Application/json"
+          "Content-Type": "Application/json",
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ work_type, work_name, work_desc })
       })
@@ -179,7 +185,8 @@ const Profile = (props) => {
       const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_qualification/${c_user}`, {
         method: "POST",
         headers: {
-          "Content-Type": "Application/json"
+          "Content-Type": "Application/json",
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ qlf_type, qlf_in, qlf_from, qlf_pctage })
       })
@@ -202,7 +209,8 @@ const Profile = (props) => {
       const res = await fetch(`https://portfolio-backend-hazel.vercel.app/add_experience/${c_user}`, {
         method: "POST",
         headers: {
-          "Content-Type": "Application/json"
+          "Content-Type": "Application/json",
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ exp_time, exp_department, exp_company, exp_role })
       })
@@ -222,7 +230,7 @@ const Profile = (props) => {
     e.preventDefault();
     try{
       console.log(social);
-      const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/social_links/${c_user}`, social);
+      const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/social_links/${c_user}`, social, { headers: { Authorization: `Bearer ${token}` }});
       if (res.status === 201 || res.status === 200) {
         setMessage({ ...message, social: "Changes Saved successfully" })
       } else {
@@ -245,7 +253,8 @@ const Profile = (props) => {
     try {
       const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/uploadfile/${c_user}`, formdata, {
         headers:{
-          "Content-type":"multipart/form-data"
+          "Content-type":"multipart/form-data",
+          Authorization: `Bearer ${token}`
         },
       });
       console.log(res);
