@@ -22,8 +22,6 @@ const Login = () => {
       body: JSON.stringify({email, password})
     })
     const data = await res.json();
-    // const token = data.headers.authorization;
-    console.log(token);
 
     if(res.status === 404 || !data){
       setErrmsg('All Fields Required.')
@@ -32,10 +30,8 @@ const Login = () => {
     }else{
       console.log('user logged in');
       navigate("/");
-      // document.cookie = `user=${data.user_tc}; path=/`;
       localStorage.setItem('user_login', true);
-      // localStorage.setItem('token', token);
-      // window.location.reload();
+      window.location.reload();
     }
   }
 
