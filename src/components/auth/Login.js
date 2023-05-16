@@ -1,11 +1,8 @@
-// import  {React, useState, useContext} from 'react';
 import  {React, useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 
-// import {UserContext} from '../../App';
-
 const Login = () => {
-  // const {state, dispatch} = useContext(UserContext);
+  
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -26,21 +23,19 @@ const Login = () => {
     })
     const data = await res.json();
     const token = response.headers.authorization.split(' ')[1];
+    console.log(token);
 
     if(res.status === 404 || !data){
       setErrmsg('All Fields Required.')
     }else if(res.status === 400){
       setErrmsg('Invalid Details.')
     }else{
-      // dispatch({type:'USER', payload:true})
       console.log('user logged in');
       navigate("/");
       // document.cookie = `user=${data.user_tc}; path=/`;
       localStorage.setItem('user_login', true);
       localStorage.setItem('token', token);
-      // localStorage.setItem('user_login_token', JSON.stringify({ isLoggedIn: true, token: token }));
-
-      window.location.reload();
+      // window.location.reload();
     }
   }
 
