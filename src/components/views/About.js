@@ -19,7 +19,7 @@ const About = () => {
   const [user_exp, setExperience] = useState([]);
   const [user_social, setUserSocials] = useState([]);
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
   const aboutPage = async () => {
