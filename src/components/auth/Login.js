@@ -22,8 +22,7 @@ const Login = () => {
       body: JSON.stringify({email, password})
     })
     const data = await res.json();
-    console.log(data)
-    const token = data.headers.authorization;
+    // const token = data.headers.authorization;
     console.log(token);
 
     if(res.status === 404 || !data){
@@ -35,7 +34,7 @@ const Login = () => {
       navigate("/");
       // document.cookie = `user=${data.user_tc}; path=/`;
       localStorage.setItem('user_login', true);
-      localStorage.setItem('token', token);
+      // localStorage.setItem('token', token);
       // window.location.reload();
     }
   }
