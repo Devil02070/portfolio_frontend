@@ -22,7 +22,7 @@ const Login = () => {
       body: JSON.stringify({email, password})
     })
     const data = await res.json();
-    const token = res.headers.authorization.split(' ')[1];
+    const token = res.headers.authorization;
     console.log(token);
 
     if(res.status === 404 || !data){
