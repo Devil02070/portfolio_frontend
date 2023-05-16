@@ -1,11 +1,7 @@
-// import {useContext, React, useEffect} from 'react'
 import {React, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom';
 
-// import {UserContext} from '../../App';
-
 const Logout = () => {
-    // const {state, dispatch} = useContext(UserContext);
     const navigate = useNavigate();
 
     const Logout_user = async()=>{
@@ -22,8 +18,8 @@ const Logout = () => {
         console.log('failed')
         navigate('/login');
       }else{
-        // dispatch({type:'USER', payload:false});
         localStorage.removeItem('user_login')
+        localStorage.removeItem('usre_token')
         navigate('/login');
         window.location.reload();
       }

@@ -13,11 +13,13 @@ const Contact = () => {
 
   const contactPage = async()=>{
     try{
+      const token = localStorage.getItem('user_token');
       const res = await fetch("https://portfolio-backend-hazel.vercel.app/contact",{
         method:"GET",
         headers:{
           Accept:"application/json",
-          "Content-Type":"application/json"
+          "Content-Type":"application/json",
+          Authorization: `Bearer ${token}`
         },
         credentials:"include"
       })
