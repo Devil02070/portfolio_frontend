@@ -10,8 +10,11 @@ const Login = () => {
 
   const [errmsg, setErrmsg] = useState('')
 
+  const [waiter,setWaiter] = useState(false);
+
   const userLogin = async(e)=>{
     e.preventDefault();
+    setWaiter(true)
 
     const res = await fetch("https://portfolio-backend-hazel.vercel.app/user/login",{
       method:"POST",
@@ -30,6 +33,7 @@ const Login = () => {
       setErrmsg('Invalid Details.')
     }else{
       console.log('user logged in');
+      setWaiter(false);
       navigate("/");
       localStorage.setItem('user_login', true);
       localStorage.setItem('user_token', token);
@@ -54,7 +58,8 @@ const Login = () => {
 
                   <input type="submit" value='Login' className='mt-3 rounded btn btn-red' />
                 </form>
-                <span className='login-loader'></span>
+                {waiter ? `<div className='login-loader mt-2'></div>`:''}
+                
               </div>
             </div>
           </div>
