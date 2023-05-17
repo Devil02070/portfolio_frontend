@@ -58,7 +58,11 @@ const Login = () => {
 
                   <input type="submit" value='Login' className='mt-3 rounded btn btn-red' />
                 </form>
-                {waiter ? `<div className='login-loader mt-2'></div>`:''}
+                {waiter ? (
+                  <>
+                    <div className='login-loader mt-2'></div>
+                  </>
+                ):(<></>)}
                 
               </div>
             </div>
