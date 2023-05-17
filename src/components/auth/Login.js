@@ -52,11 +52,9 @@ const Login = () => {
 
                   <p className='text-danger text-end mt-4'>{errmsg}</p>
 
-                  <input type="submit" value='Login' className='mt-3 rounded btn btn-red' /><span className='login-loader'></span>
+                  <input type="submit" value='Login' className='mt-3 rounded btn btn-red' />
                 </form>
-                {/* <div className="text-end">
-                  <Link>Forgot Password!</Link>
-                </div> */}
+                <span className='login-loader'></span>
               </div>
             </div>
           </div>
