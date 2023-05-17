@@ -140,34 +140,18 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .user .profileImage{height: 400px !important; width: 400px !important;}
 .user .profileImg{background: #8928af;}
 .user .profileImg img{width: 100%;}
-.sp-username {
-    font-size: 130px;
-    font-weight: 900;
-    position: absolute;
-    top: 80px;
-	left: 2%;
-    opacity: .2;
-	z-index: 2;
-	transform: rotate(-6deg);
-}
+.sp-username {font-size: 130px;font-weight: 900;position: absolute;top: 80px;left: 2%;opacity: .2;z-index: 2;transform: rotate(-6deg);}
 
+.login-loader{border: 5px solid #ffffff;border-top: 5px solid #752296;border-radius: 50%;width: 20px;height: 20px;animation: spin 2s linear infinite;	margin: auto; }
 
 .loading-screen{position:fixed; height:100vh; top:0px;z-index:99999999;background:#121212;width:100%;display:flex; align-items:center;justify-content:center}
-.loader {
-	border: 16px solid #ffffff;
-	border-top: 16px solid #752296;
-	border-radius: 50%;
-	width: 120px;
-	height: 120px;
-	animation: spin 2s linear infinite;
-	margin: auto;
-  }
-  .loader-text{position:absolute}
+.loader {border: 16px solid #ffffff;border-top: 16px solid #752296;border-radius: 50%;width: 120px;height: 120px;	animation: spin 2s linear infinite;	margin: auto; }
+.loader-text{position:absolute}
   
-  @keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-  }
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
 
 /* ******************************************************************Responsiveness********************************************** */
 @media(min-width:500px){
