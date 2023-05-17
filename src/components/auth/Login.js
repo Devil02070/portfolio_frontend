@@ -29,8 +29,10 @@ const Login = () => {
 
     if(res.status === 404 || !data){
       setErrmsg('All Fields Required.')
+      setWaiter(false);
     }else if(res.status === 400){
       setErrmsg('Invalid Details.')
+      setWaiter(false);
     }else{
       console.log('user logged in');
       setWaiter(false);
