@@ -40,7 +40,11 @@ const SingleUser = () => {
       setProjectDetails(data.user_skills[0]['projects']);
       setQualification(data.user_skills[0]['qualification']);
       setExperience(data.user_skills[0]['experience']);
-      setIsLoading(false);
+      if(data.length>0){
+        setIsLoading(false);
+      }else{
+        console.log('no information available')
+      }
     } catch (e) {
       console.log(e)
     }
