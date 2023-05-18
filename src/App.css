@@ -173,6 +173,22 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 }
 
 /* ******************************************************************Responsiveness********************************************** */
+@media (min-width: 1200px) and (max-width:1500px) {
+	.container{max-width: 1200px !important;}
+	.home-vec1 {top: 8%;}
+	.home-vec3 {top: 78%;}
+	.home-vec7 {right: 4%;top: 37%;width: 5%!important;	}
+	.home-vec4 {right: 8%;top: 34%;width: 2%!important;}
+
+	.sp-banner h5.sp-title {font-size: 60px;}
+	.sp-banner .overlay {background-position: bottom 120px right 0px;background-repeat: no-repeat;background-size: auto;}
+	.profile-banner-pc .col-md-7 {z-index: 9999;}
+
+	.mrq-text {font-size: 20px;}
+	.scroll-main {padding-bottom: 45px;}
+}
+@media (max-width: 991px) {}
+@media (max-width: 991px) {}
 @media(min-width:500px){
 	.pc-menu{display: block;}
 	.dropdowm-mobile-menu{display: none;}
@@ -203,6 +219,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.home-vec2{position: absolute; width: 9% !important; left: 8%; top: 69%; }
 	.home-vec5{position: absolute; width: 5% !important; left: 14%; top: 66%}
 	.home-vec6{position: absolute; width: 3% !important; left: 18%; top: 64%}
+	.home-vec3 {top: 85%;}
 
 	.About {height: 100% !important;}
 	.About .social-links{display: none;}
