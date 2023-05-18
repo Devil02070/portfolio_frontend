@@ -37,7 +37,7 @@ const About = () => {
       });
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       // get response
       if (res.status !== 200 || !data) {
         localStorage.removeItem('user_login');
