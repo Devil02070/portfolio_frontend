@@ -52,7 +52,7 @@ const Members = () => {
                   userprofile.map((elem) => {
                     return (
                       // <div key={elem._id} className="user_card m-2 p-4 rounded text-center border m-2">
-                      <div key={elem._id} className="user_card m-2 p-4 text-center m-2">
+                      <div key={elem._id} className="user_card m-2 p-4 text-center">
 
                         {/* <img src={elem.profile_pic} className='w-100 rounded user-profile-img' height={300}/> */}
                         <div className="flip-card">
@@ -84,7 +84,7 @@ const Members = () => {
                 {
                   user.map((single_user) => {
                     return (
-                      <div key={single_user._id} className="user_card m-2 p-4 rounded text-center border m-2">
+                      <div key={single_user._id} className="user_card m-2 p-4 rounded text-center border">
                         <h6>{single_user.f_name + single_user.l_name}</h6>
                         <p>{single_user.email}</p>
                         <p>{single_user.phone_no}</p>

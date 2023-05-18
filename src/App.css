@@ -235,7 +235,8 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.del-btn{display: block !important;}
 
 	.members{padding: 40px 20px 40px 10px; overflow-y: auto;}
-	.user_card{width:50% !important;padding:0px !important; margin: 0px 0px 20px 0px !important;}
+	.user_card{width:46% !important;padding:0px !important; margin: 0px 0px 20px 0px !important;}
+	.user-profile-img{height: auto;}
 
 	.sp-username {font-size: 60px;top: 94px;}
 	.user{padding: 0px 10px !important;}
