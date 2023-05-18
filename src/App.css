@@ -195,7 +195,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 }
 @media(max-width:500px){
 	.pc-menu{display: none;}
-	.dropdowm-mobile-menu{display: block;}
+	.dropdowm-mobile-menu{display: block;z-index:999999 !important}
 
 	img.w-25.rounded.site_logo{width: 30% !important;}
 	.logo{margin-bottom: -52px !important;}
@@ -235,7 +235,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.del-btn{display: block !important;}
 
 	.members{padding: 40px 20px 40px 10px; overflow-y: auto;}
-	.user_card{width:100% !important;}
+	.user_card{width:50% !important;padding:0px !important; margin: 0px 0px 20px 0px !important;}
 
 	.sp-username {font-size: 60px;top: 94px;}
 	.user{padding: 0px 10px !important;}
