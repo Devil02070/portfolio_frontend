@@ -237,6 +237,8 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.members{padding: 40px 20px 40px 10px; overflow-y: auto;}
 	.user_card{width:100% !important;}
 
+	.sp-username {font-size: 60px;top: 94px;}
+	.banner-vec2 {left: 6%;top: 11%;}
 	.user{padding: 0px 10px !important;}
 	.user .profileImage{height: 300px !important; width: 300px !important; }
 	.user h3{font-size: 35px !important; margin-top: 0px !important;}
