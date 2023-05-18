@@ -153,9 +153,9 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 100% { transform: rotate(360deg); }
 }
 
-.mrq-text{font-size: 40px;font-weight: 500; padding: 0px 20px;color:#ffffff}
-.dash{background-color: #752296;padding:5px 25px}
-.scroll-main{overflow-x: hidden !important;position: relative;padding-bottom: 110px;background:#8f2fb5}
+.mrq-text{font-size: 40px;font-weight: 500; padding: 0px 20px;color:#000000}
+.dash{background-image: linear-gradient(to right, #D81521, #8214ad);padding:5px 25px}
+.scroll-main{overflow-x: hidden !important;position: relative;padding-bottom: 80px;background:#8f2fb5}
 .scroll-main::before,.scroll-main::after{  content: ""; position: absolute; z-index: 999999; top: 0; bottom: 0; box-shadow: 0 0 60px 85px #8f2fb5;}
 .scroll-main::after{content: ""; position: absolute; top: 0; bottom: 0; right:0px; box-shadow: 0 0 60px 85px #8f2fb5; /* box-shadow: 0 0 70px 105px #D9D9D9; */}
 .gap{background:#ffffff;padding:2px 0px}
