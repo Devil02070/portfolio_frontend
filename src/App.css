@@ -111,6 +111,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .members .row{padding: 35px 0px 0px 0px; background: #121212;}
 .user_card{width: 23.3% !important; color: #ffffff;}
 .members h3{color: #ffffff;background-image:linear-gradient(to right, #8928AF, #000000) !important;padding: 20px;}
+.pf-users .user_card{padding:15px}
 
 .flip-card {perspective: 1000px;}
 .flip-card-inner {position: relative;text-align: center;transition: transform 1s;transform-style: preserve-3d;}

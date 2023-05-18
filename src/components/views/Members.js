@@ -45,14 +45,14 @@ const Members = () => {
         // Display the content once it's loaded
         <>
           <section className='members'>
-            <div className="container">
+            <div className="container pf-users">
               <h3 className='rounded'>Users Having portfolio:</h3>
               <div className="row">
                 {
                   userprofile.map((elem) => {
                     return (
                       // <div key={elem._id} className="user_card m-2 p-4 rounded text-center border m-2">
-                      <div key={elem._id} className="user_card m-2 p-4 text-center">
+                      <div key={elem._id} className="user_card m-2 text-center">
 
                         {/* <img src={elem.profile_pic} className='w-100 rounded user-profile-img' height={300}/> */}
                         <div className="flip-card">
