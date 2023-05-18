@@ -184,8 +184,8 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.sp-banner .overlay {background-position: bottom 120px right 0px;background-repeat: no-repeat;background-size: auto;}
 	.profile-banner-pc .col-md-7 {z-index: 9999;}
 
-	.mrq-text {font-size: 20px;}
-	.scroll-main {padding-bottom: 45px;}
+	/* .mrq-text {font-size: 20px;}
+	.scroll-main {padding-bottom: 45px;} */
 }
 @media (max-width: 991px) {}
 @media (max-width: 991px) {}
@@ -238,7 +238,6 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	.user_card{width:100% !important;}
 
 	.sp-username {font-size: 60px;top: 94px;}
-	.banner-vec2 {left: 6%;top: 11%;}
 	.user{padding: 0px 10px !important;}
 	.user .profileImage{height: 300px !important; width: 300px !important; }
 	.user h3{font-size: 35px !important; margin-top: 0px !important;}
@@ -249,13 +248,18 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	
 	.banner-vec3{position: absolute; width: 5% !important; right: 8%; top: 90%}
 	.banner-vec4{position: absolute; width: 3% !important; right: 10%; top: 20%}
-	.banner-vec2 {left: 6%;top: 11%;}
+	.banner-vec2 {left: 6%;top: 11%;width: 5%}
 	.btn-grad{margin: 10px 0px !important;}
 	h2{font-size: 40px !important;}
 	.container{padding: 0px 20px !important;}
 	.Login .col-12, .Signup .col-12, .Contact .col-12{width:100% !important;}
 	.Signup{height:100vh !important}
 	.Contact .card{width:94% !important; margin: 30px 0px 0px 13px !important;}
+
+	.mrq-text {font-size: 20px;}
+	.scroll-main {padding-bottom: 45px;}
+	.dash {padding: 4px 18px;}
+	.scroll-main::after, .scroll-main::before {box-shadow: 0 0 30px 50px #8f2fb5;}
 }
 
 .mouse {
