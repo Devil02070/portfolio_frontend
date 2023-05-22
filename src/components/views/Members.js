@@ -39,7 +39,7 @@ const Members = () => {
           <seciton className="loading-screen">
             <div className='vector'>
               {/* <div className="loader"></div> */}
-              <img src={loading} className='w-50'/>
+              <img src={loading} className='w-25 m-auto'/>
               <p className='loader-text text-light pt-3'>Loading...</p>
             </div>
           </seciton>
