@@ -39,9 +39,9 @@ const Navbar = (props) => {
                     {/* <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/messages">Messages</NavLink>
                     </li> */}
-                    {/* <li className="nav-item mx-1">
+                    <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/contact">Support</NavLink>
-                    </li> */}
+                    </li>
                     <li className="nav-item mx-1">
                         <NavLink className="fs-6 text-decoration-none" to="/logout"><button className='rounded btn-grad text-light w-100'>Logout</button></NavLink>
                     </li>
