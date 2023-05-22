@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import loading from '../../images/reveal-loading.gif'
+
 const Members = () => {
   const [user, setUser] = useState([]);
   const [userprofile, setUserProfile] = useState([]);
@@ -36,7 +38,8 @@ const Members = () => {
         <>
           <seciton className="loading-screen">
             <div className='vector'>
-              <div className="loader"></div>
+              {/* <div className="loader"></div> */}
+              <img src={loading} className='w-50'/>
               <p className='loader-text text-light pt-3'>Loading...</p>
             </div>
           </seciton>
