@@ -249,7 +249,7 @@ const Profile = (props) => {
     formdata.append("profile_image", imagefile);
     console.log(imagefile)  //returns object
 
-    console.log(formdata);  // returns empty object why
+    console.log(formdata);  // returns empty object why?
     try {
       const res = await axios.patch(`https://portfolio-backend-hazel.vercel.app/uploadfile/${c_user}`, formdata, {
         headers:{

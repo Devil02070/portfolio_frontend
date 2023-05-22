@@ -31,7 +31,7 @@ const Navbar = (props) => {
                         <NavLink className="nav-link text-light" to="/">Home</NavLink>
                     </li>
                     <li className="nav-item mx-1">
-                        <NavLink className="nav-link text-light" to="/about">About</NavLink>
+                        <NavLink className="nav-link text-light" to="/about">My Profile</NavLink>
                     </li>
                     <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/view_users">Users</NavLink>
@@ -39,9 +39,9 @@ const Navbar = (props) => {
                     {/* <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/messages">Messages</NavLink>
                     </li> */}
-                    <li className="nav-item mx-1">
+                    {/* <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/contact">Support</NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-item mx-1">
                         <NavLink className="fs-6 text-decoration-none" to="/logout"><button className='rounded btn-grad text-light w-100'>Logout</button></NavLink>
                     </li>
@@ -55,6 +55,9 @@ const Navbar = (props) => {
                     </li>
                     <li className="nav-item mx-1">
                         <NavLink className="nav-link text-light" to="/view_users">Users</NavLink>
+                    </li>
+                    <li className="nav-item mx-1">
+                        <NavLink className="nav-link text-light" to="/contact">Support</NavLink>
                     </li>
                     <li className="nav-item mx-1">
                         <NavLink className="fs-6 text-decoration-none" to="/login"><button className='rounded btn-grad text-light w-100'>Login</button></NavLink>
