@@ -25,7 +25,7 @@ const Members = () => {
 
     setUser(data.all_users);
     setUserProfile(data.single_user_details);
-    setIsLoading(true);
+    // setIsLoading(true);
   }
   useEffect(() => {
     get_members();
