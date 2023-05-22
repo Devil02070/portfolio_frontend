@@ -37,10 +37,10 @@ const Members = () => {
         // Display the loader while the content is loading
         <>
           <seciton className="loading-screen">
-            <div className='vector'>
+            <div className='vector text-center'>
               {/* <div className="loader"></div> */}
               <img src={loading} className='w-25 m-auto'/>
-              <p className='loader-text text-light pt-3'>Loading...</p>
+              <p className='loader-text text-light pt-3 text-center m-auto'>Loading...</p>
             </div>
           </seciton>
         </>
