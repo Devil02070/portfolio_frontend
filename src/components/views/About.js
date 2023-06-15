@@ -7,6 +7,7 @@ import { AiOutlineEdit } from 'react-icons/ai';
 import ProfileModal from '../modals/Profile';
 import axios from 'axios';
 // import profile_img from '../../images/12341.jpg';
+import loading from '../../images/reveal-loading.gif'
 
 const About = () => {
   const [c_user, setC_user] = useState();
@@ -102,9 +103,8 @@ const About = () => {
       {isLoading ? (
         <>
           <seciton className="loading-screen">
-            <div className='vector'>
-              <div className="loader"></div>
-              <p className='loader-text text-light pt-3'>Loading...</p>
+            <div className='vector text-center'>
+              <img src={loading} className='w-25 m-auto'/>
             </div>
           </seciton>
         </>

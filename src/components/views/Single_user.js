@@ -9,6 +9,8 @@ import { FaRegAddressBook } from 'react-icons/fa';
 import vector1 from '../../images/vector1.png';
 // import vector2 from '../../images/sp-2.png';
 
+import loading from '../../images/reveal-loading.gif'
+
 
 const SingleUser = () => {
   const [single_user_data, setSingleuserdata] = useState([]);
@@ -56,9 +58,8 @@ const SingleUser = () => {
       {isLoading ? (
         <>
           <seciton className="loading-screen">
-            <div className='vector'>
-              <div className="loader"></div>
-              <p className='loader-text text-light pt-3'>Loading...</p>
+            <div className='vector text-center'>
+              <img src={loading} className='w-25 m-auto'/>
             </div>
           </seciton>
         </>
