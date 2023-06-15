@@ -72,7 +72,7 @@ const Home = () => {
                 <p className='text-light sub-heading'>Highlight Your Skills</p>
                 <h2 className=''>Build Your Own Portfolio Today</h2>
                 <p className='text-para'>Hello and welcome to my portfolio website! My name is Shryder and I'm a full-stack web developer with a passion for creating beautiful, responsive, and user-friendly websites. I have created this website where users can create their resumes.</p>
-                <Link to="/about"><button className='btn btn-red'>Let's Go</button></Link>
+                <Link to="/about"><button className='btn btn-red'>Create Now</button></Link>
               </div>
             </div>
           </div>

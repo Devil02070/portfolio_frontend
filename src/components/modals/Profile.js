@@ -444,7 +444,7 @@ const Profile = (props) => {
                   <option value="Matriculation" className='text-dark'>Matriculation</option>
                   <option value="10+2" className='text-dark'>10+2</option>
                   <option value="Graduation" className='text-dark'>Graduation</option>
-                  <option value="Post Gradustion" className='text-dark'>Post Gradustion</option>
+                  <option value="Post Gradustion" className='text-dark'>Post Graduation</option>
                   <option value="other" className='text-dark'>other</option>
                 </select>
                 <input type="text" name="qlf_in" value={qualification.qlf_in} onChange={handleInput} placeholder="Qualification In" className='w-100 bg-transparent mt-4 border p-2 rounded text-light' /><br />

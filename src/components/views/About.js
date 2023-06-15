@@ -323,7 +323,6 @@ const About = () => {
                           <button className='btn text-light del-btn' onClick={() => deleteSkill(c_user, _id)}><TfiTrash /></button>
                         </div>
                       </div>
-
                     )
                   })
                 }
