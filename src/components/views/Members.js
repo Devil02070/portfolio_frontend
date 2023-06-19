@@ -45,7 +45,7 @@ const Members = () => {
       ) : (
         // Display the content once it's loaded
         <>
-          <section className='members'>
+          <section className='members pb-5'>
             <div className="container pf-users">
               <h3 className='rounded'>Users Having portfolio:</h3>
               <div className="row">
