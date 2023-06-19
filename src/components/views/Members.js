@@ -29,6 +29,16 @@ const Members = () => {
   }
   useEffect(() => {
     get_members();
+
+    const team = document.querySelectorAll('.tm-row');
+    team.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.classList.add('active');
+      })
+      item.addEventListener('mouseout', () => {
+        item.classList.remove('active')
+      });
+    })
   }, []);
 
   return (
@@ -38,7 +48,7 @@ const Members = () => {
         <>
           <seciton className="loading-screen">
             <div className='vector text-center'>
-              <img src={loading} className='w-25 m-auto'/>
+              <img src={loading} className='w-25 m-auto' />
             </div>
           </seciton>
         </>
@@ -97,6 +107,29 @@ const Members = () => {
               </div>
             </div>
           </section>
+
+
+          <section className='myteam pb-120'>
+            <div className="container">
+              {userprofile.map((singleUser) => {
+                return (
+                  <>
+                    <div className="row align-items-center tm-row">
+                      <div className="col-5 name">
+                        <h2 className="normal">{singleUser.username}</h2>
+                        <h2 className="hovered">{singleUser.username}</h2>
+                      </div>
+                      <div className="col-5"><img src={singleUser.profile_pic} alt="" className='tm-profile' /></div>
+                      <div className="col-2"><p className='text-end'>{singleUser.profession}</p></div>
+                    </div>
+                    <hr className="m-0 p-0" />
+                  </>
+                )
+              })}
+
+            </div>
+          </section>
+          <hr />
         </>
       )}
     </>
