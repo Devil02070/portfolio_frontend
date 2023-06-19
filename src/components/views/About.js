@@ -44,6 +44,7 @@ const About = () => {
         localStorage.removeItem('user_login');
         navigate('/login');
       } else {
+        setIsLoading(false);
         // console.log(data);
         setC_user(data.single_user_data[0]['_id']);
 
@@ -55,8 +56,6 @@ const About = () => {
         setQualification(data.user_skills[0]['qualification']);
         setExperience(data.user_skills[0]['experience']);
         setUserSocials(data.user_skills[0]['socials']);
-        // console.log(user_social)
-        setIsLoading(false);
       }
     } catch (e) {
       console.log(e);
