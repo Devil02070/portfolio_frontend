@@ -9,6 +9,8 @@ const Signup = () => {
   });
   const [errmsg, setErrmsg] = useState('')
 
+  const [waiter,setWaiter] = useState(false);
+
   let field, value;
   const handleInputs = (e)=>{
     field = e.target.name;
@@ -34,18 +36,18 @@ const Signup = () => {
     if(res.status === 404 || !data){
       // window.alert(data.error);
       setErrmsg("All Fields Required")
+      setWaiter(false);
     }
     else if(res.status === 422){
       // window.alert(data.error);
       setErrmsg("Email already registered. Please Try Different One.")
+      setWaiter(false);
     }else{
       window.alert(data.success);
       navigate("/login");
+      setWaiter(false);
     }
   }
-  // useEffect(()=>{
-  //   PostData();
-  // }, []);
   return (
     <>
         <section className='dark-bg Signup pt-80'>
@@ -70,6 +72,11 @@ const Signup = () => {
 
                   <input type="submit" value='Create Account' className='mt-4 rounded btn btn-red' />
                 </form>
+                {waiter ? (
+                  <>
+                    <div className='login-loader mt-2'></div>
+                  </>
+                ):(<></>)}
               </div>
             </div>
             </div>
