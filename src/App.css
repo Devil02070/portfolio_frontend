@@ -297,3 +297,36 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* test  sections*/
+/* .myteam .tm-profile,.myteam .active h2.normal, .myteam h2.hovered{display:none;} */
+.myteam .sktext{display:none;}
+
+.myteam .name{overflow:hidden;height:60px}
+.myteam h2{transition:all .4s ease; font-size: 45px;}
+.myteam .active .name h2.normal{margin-top:-60px}
+
+.myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
+.myteam .sktext{position:absolute;bottom:-120px;width:25% !important; }
+
+.myteam .active .sktext{display:block;animation:slightmove .7s forwards !important;}
+.myteam .active h2.hovered{display:block; color:#F4A71C}
+.myteam p{color:#F4A71C}
+
+@keyframes slightmove{
+  0% {transform:translate(0px,0px)}
+  100% {transform:translate(0px,-20px)}
+  /* 0%{bottom:-120px};
+  100%{bottom:-60px} */
+}

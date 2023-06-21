@@ -50,6 +50,17 @@ const SingleUser = () => {
 
   useEffect(() => {
     Single_user();
+
+    // section-1
+    const team = document.querySelectorAll('.tm-row');
+    team.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('active');
+        })
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('active')
+        });
+    })
   }, [])
 
 
@@ -59,7 +70,7 @@ const SingleUser = () => {
         <>
           <seciton className="loading-screen">
             <div className='vector text-center'>
-              <img src={loading} className='w-25 m-auto'/>
+              <img src={loading} className='w-25 m-auto' />
             </div>
           </seciton>
         </>
@@ -208,14 +219,14 @@ const SingleUser = () => {
             </div>
           </section>
 
-          <section className='bg-dark py-80 text-light'>
+          {/* <section className='bg-dark py-80 text-light'>
             <div className="container">
               <div className="row text-center">
                 <h2>PROFESSIONAL SKILLS</h2>
                 <p className=''>MY<em>Talent</em></p>
               </div>
               <div className="row skills">
-                {
+                 {
                   user_skill.map((elem) => {
                     const { _id, sk_name, sk_pctage, sk_desc } = elem;
                     return (
@@ -231,7 +242,37 @@ const SingleUser = () => {
                 }
               </div>
             </div>
+          </section> */}
+
+          {/* ***************************************************************************** */}
+          {/* ***************************************************************************** */}
+          {/* testing sections 1*/}
+
+          <section className='myteam py-120'>
+            <div className="container">
+              {user_skill.map((skill) => {
+                const { _id, sk_name, sk_pctage, sk_desc } = skill;
+                return (
+                  <div key={_id}>
+                    <div className="row align-items-center tm-row">
+                      <div className="col-5 name">
+                        <h2 className="normal">{sk_name}</h2>
+                        <h2 className="hovered">{sk_name}</h2>
+                      </div>
+                      <div className="col-5 px-5"><p className='sktext'>{sk_desc}</p></div>
+                      <div className="col-2"><p className='text-end'>{sk_pctage}</p></div>
+                    </div>
+                    <hr className="m-0 p-0" />
+                  </div>
+                )
+              })}
+
+            </div>
           </section>
+          <hr />
+          {/* ***************************************************************************** */}
+          {/* ***************************************************************************** */}
+
 
           <section className='dark py-80 text-light mywork'>
             <div className="container">
