@@ -319,6 +319,11 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 
 .myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
 .myteam .sktext{position:absolute;bottom:-120px;width:25% !important; color: #000000 !important;}
+.myteam .sktext {
+    background: #e5e5e5;
+    padding: 30px;
+    border-radius: 25px 0px 25px 0px;
+}
 
 .myteam .active .sktext{display:block;animation:slightmove .7s forwards !important;}
 .myteam .active h2.hovered{display:block; color:#F4A71C !important;}
