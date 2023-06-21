@@ -314,7 +314,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .myteam .sktext{display:none;}
 
 .myteam .name{overflow:hidden;height:60px}
-.myteam h2{transition:all .4s ease; font-size: 45px;color:#000000 !important}
+.myteam h2{transition:all .4s ease; font-size: 40px;color:#000000 !important}
 .myteam .active .name h2.normal{margin-top:-60px}
 
 .myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}

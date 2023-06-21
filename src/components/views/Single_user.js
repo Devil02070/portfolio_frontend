@@ -48,10 +48,7 @@ const SingleUser = () => {
     }
   }
 
-  useEffect(() => {
-    Single_user();
-
-    // section-1
+  const Hovering = ()=>{
     const team = document.querySelectorAll('.tm-row');
     team.forEach(item => {
         item.addEventListener('mouseover', () => {
@@ -61,6 +58,11 @@ const SingleUser = () => {
             item.classList.remove('active')
         });
     })
+  }
+
+  useEffect(() => {
+    Single_user();
+    Hovering();
   }, [])
 
 
