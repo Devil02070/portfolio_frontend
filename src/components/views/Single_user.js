@@ -47,10 +47,7 @@ const SingleUser = () => {
       console.log(e)
     }
   }
-
-
-  useEffect(() => {
-    Single_user();
+  const rowHover = ()=>{
     const team = document.querySelectorAll('.tm-row');
     team.forEach(item => {
       item.addEventListener('mouseover', () => {
@@ -61,6 +58,12 @@ const SingleUser = () => {
       });
     })
     console.log('coming here')
+  }
+
+  useEffect(() => {
+    Single_user();
+    rowHover();
+    
   }, [])
 
   return (
@@ -253,7 +256,7 @@ const SingleUser = () => {
                 const { _id, sk_name, sk_pctage, sk_desc } = skill;
                 return (
                   <div key={_id}>
-                    <div className="row align-items-center tm-row">
+                    <div className="row align-items-center tm-row" onMouseOver={rowHover}>
                       <div className="col-5 name">
                         <h2 className="normal">{sk_name}</h2>
                         <h2 className="hovered">{sk_name}</h2>

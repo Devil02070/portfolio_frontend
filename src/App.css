@@ -313,9 +313,9 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 /* .myteam .tm-profile,.myteam .active h2.normal, .myteam h2.hovered{display:none;} */
 .myteam .sktext{display:none;}
 
-.myteam .name{overflow:hidden;height:60px}
+.myteam .name{overflow:hidden;height:50px}
 .myteam h2{transition:all .4s ease; font-size: 35px !important;color:#000000 !important}
-.myteam .active .name h2.normal{margin-top:-60px}
+.myteam .active .name h2.normal{margin-top:-50px}
 
 .myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
 .myteam .sktext{position:absolute;bottom:-120px;width:25% !important; color: #000000 !important;}
