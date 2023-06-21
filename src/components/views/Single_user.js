@@ -51,20 +51,20 @@ const SingleUser = () => {
 
   useEffect(() => {
     Single_user();
-  }, [])
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const team = document.querySelectorAll('.tm-row');
-    team.forEach(item => {
-      item.addEventListener('mouseover', () => {
-        item.classList.add('active');
+    if (!isLoading) {
+      const team = document.querySelectorAll('.tm-row');
+      team.forEach(item => {
+        item.addEventListener('mouseover', () => {
+          item.classList.add('active');
+        })
+        item.addEventListener('mouseout', () => {
+          item.classList.remove('active')
+        });
       })
-      item.addEventListener('mouseout', () => {
-        item.classList.remove('active')
-      });
-    })
-  })
-
+      console.log('coming here')
+    }
+  }, [])
 
   return (
     <>
