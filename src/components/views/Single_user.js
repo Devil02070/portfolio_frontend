@@ -254,7 +254,7 @@ const SingleUser = () => {
             <div className="container">
               <div className="row text-center">
                 <h2 className='text-dark'>PROFESSIONAL SKILLS</h2>
-                <p className='text-dark'>MY<em>Talent</em></p>
+                <p className='text-primary'>MY<em>Talent</em></p>
               </div>
               {user_skill.map((skill) => {
                 const { _id, sk_name, sk_pctage, sk_desc } = skill;
