@@ -51,19 +51,16 @@ const SingleUser = () => {
 
   useEffect(() => {
     Single_user();
-
-    if (!isLoading) {
-      const team = document.querySelectorAll('.tm-row');
-      team.forEach(item => {
-        item.addEventListener('mouseover', () => {
-          item.classList.add('active');
-        })
-        item.addEventListener('mouseout', () => {
-          item.classList.remove('active')
-        });
+    const team = document.querySelectorAll('.tm-row');
+    team.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.classList.add('active');
       })
-      console.log('coming here')
-    }
+      item.addEventListener('mouseout', () => {
+        item.classList.remove('active')
+      });
+    })
+    console.log('coming here')
   }, [])
 
   return (

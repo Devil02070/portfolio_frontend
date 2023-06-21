@@ -314,7 +314,7 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .myteam .sktext{display:none;}
 
 .myteam .name{overflow:hidden;height:60px}
-.myteam h2{transition:all .4s ease; font-size: 40px;color:#000000 !important}
+.myteam h2{transition:all .4s ease; font-size: 35px !important;color:#000000 !important}
 .myteam .active .name h2.normal{margin-top:-60px}
 
 .myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
@@ -326,8 +326,8 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 }
 
 .myteam .active .sktext{display:block;animation:slightmove .7s forwards !important;}
-.myteam .active h2.hovered{display:block; color:#F4A71C !important;}
-.myteam p{color:#F4A71C}
+.myteam .active h2.hovered{display:block; color:#8f2fb5 !important;}
+.myteam p{color:#8f2fb5}
 
 @keyframes slightmove{
   0% {transform:translate(0px,0px)}
