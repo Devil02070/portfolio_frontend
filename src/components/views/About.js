@@ -344,10 +344,10 @@ const About = () => {
                 {project_details.map((elem) => {
                   return (
                     <div className="col border p-4 m-2 rounded" key={elem._id}>
-                      <img src={elem.pj_thumbnail} alt="project thumbnail" class="w-100" />
+                      {/* <img src={elem.pj_thumbnail} alt="project thumbnail" class="w-100" /> */}
                       <h3 className='fw-bold ls-1 mt-2'>{elem.pj_name}</h3>
                       <p>{elem.pj_desc}</p>
-                      <p>Link: <em><a href={elem.pj_link} className='web-link'>{elem.pj_link}</a></em></p>
+                      <p>Visit Url: <em><a href={elem.pj_link} className='web-link'>{elem.pj_link}</a></em></p>
                       <div className="d-flex justify-content-end mb-4">
                         {/* <button className='btn text-light border ms-2' data-bs-toggle="modal" data-bs-target="#edit-project"><AiOutlineEdit /></button> */}
                         <button className='btn text-light del-btn' onClick={() => deleteProject(c_user, elem._id)}><TfiTrash /></button>

@@ -106,7 +106,7 @@ const Profile = (props) => {
   }
 
   // _________Project______________________________________
-  const [thumbnail, setThumbnail] = useState();
+  const [thumbnail, setThumbnail] = useState(null);
   const add_project = async (e) => {
     e.preventDefault();
     const { pj_name, pj_desc, pj_link } = project;
@@ -363,8 +363,8 @@ const Profile = (props) => {
                 <input type="text" name="pj_desc" value={project.pj_desc} onChange={handleInput} placeholder="Project Description" className='w-100 bg-transparent mt-2 border p-2 rounded text-light' /><br />
                 <label htmlFor="" className='mt-3'>Link to Project:</label>
                 <input type="text" name="pj_link" value={project.pj_link} onChange={handleInput} placeholder="Project Link" className='w-100 bg-transparent mt-2 border p-2 rounded text-light' /><br />
-                <label htmlFor="" className='mt-3'>Project Thumbnail:</label>
-                <input type="file" name='pj_thumbnail' onChange={(e)=>setThumbnail(e.target.files[0])} className='p-3 text-light' />
+                {/* <label htmlFor="" className='mt-3'>Project Thumbnail:</label>
+                <input type="file" name='pj_thumbnail' onChange={(e)=>setThumbnail(e.target.files[0])} className='p-3 text-light' /> */}
 
                 <div className="text-end">
                   <input type="submit" value="Save" className='btn-red border-0 rounded' />
