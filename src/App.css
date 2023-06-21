@@ -330,11 +330,16 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .myteam p{color:#8f2fb5}
 .text-primary{color:#8f2fb5 !important}
 
+.my-team:hover .kursorChild.kursorChild--hidden{
+	background:#000000 !important;
+}
+.my-team:hover div[class*=kursor].kursor--4 {
+    border: 1px solid #000000 !important;
+}
+
 @keyframes slightmove{
   0% {transform:translate(0px,0px)}
   100% {transform:translate(0px,-20px)}
-  /* 0%{bottom:-120px};
-  100%{bottom:-60px} */
 }
 
 @media(max-width:500px){
@@ -348,9 +353,10 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 		height: 20px;
 	}
 	.myteam .sktext {
+		background: #e5e5e5c4;
 		bottom: -45px;
 		right: 0px;
 		width: 70%!important;
-		backdrop-filter: blur(2px)
+		backdrop-filter: blur(2px) !important;
 	}
 }
