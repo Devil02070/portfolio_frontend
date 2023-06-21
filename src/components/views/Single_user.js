@@ -48,25 +48,22 @@ const SingleUser = () => {
     }
   }
 
-  const Hovering = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-      const team = document.querySelectorAll('.tm-row');
-      team.forEach(item => {
-        item.addEventListener('mouseover', () => {
-          item.classList.add('active');
-        })
-        item.addEventListener('mouseout', () => {
-          item.classList.remove('active')
-        });
-      })
-    })
-
-  }
 
   useEffect(() => {
     Single_user();
-    Hovering();
   }, [])
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const team = document.querySelectorAll('.tm-row');
+    team.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.classList.add('active');
+      })
+      item.addEventListener('mouseout', () => {
+        item.classList.remove('active')
+      });
+    })
+  })
 
 
   return (
