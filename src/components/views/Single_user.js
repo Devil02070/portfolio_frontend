@@ -47,7 +47,7 @@ const SingleUser = () => {
       console.log(e)
     }
   }
-  const rowHover = ()=>{
+  const rowHover = () => {
     const team = document.querySelectorAll('.tm-row');
     team.forEach(item => {
       item.addEventListener('mouseover', () => {
@@ -63,7 +63,7 @@ const SingleUser = () => {
   useEffect(() => {
     Single_user();
     rowHover();
-    
+
   }, [])
 
   return (
@@ -250,8 +250,12 @@ const SingleUser = () => {
           {/* ***************************************************************************** */}
           {/* testing sections 1*/}
 
-          <section className='myteam py-120'>
+          <section className='myteam py-80'>
             <div className="container">
+              <div className="row text-center">
+                <h2 className='text-dark'>PROFESSIONAL SKILLS</h2>
+                <p className='text-dark'>MY<em>Talent</em></p>
+              </div>
               {user_skill.map((skill) => {
                 const { _id, sk_name, sk_pctage, sk_desc } = skill;
                 return (

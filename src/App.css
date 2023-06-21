@@ -328,10 +328,29 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 .myteam .active .sktext{display:block;animation:slightmove .7s forwards !important;}
 .myteam .active h2.hovered{display:block; color:#8f2fb5 !important;}
 .myteam p{color:#8f2fb5}
+.text-primary{color:#8f2fb5 !important}
 
 @keyframes slightmove{
   0% {transform:translate(0px,0px)}
   100% {transform:translate(0px,-20px)}
   /* 0%{bottom:-120px};
   100%{bottom:-60px} */
+}
+
+@media(max-width:500px){
+	.myteam .active .name h2.normal {
+		margin-top: -32px;
+	}
+	.myteam h2 {
+		font-size: 20px!important;
+	}
+	.myteam .name {
+		height: 20px;
+	}
+	.myteam .sktext {
+		bottom: -45px;
+		right: 0px;
+		width: 70%!important;
+		backdrop-filter: blur(2px)
+	}
 }
