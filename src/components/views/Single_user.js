@@ -57,7 +57,6 @@ const SingleUser = () => {
         item.classList.remove('active')
       });
     })
-    console.log('coming here')
   }
 
   useEffect(() => {
@@ -250,7 +249,7 @@ const SingleUser = () => {
           {/* ***************************************************************************** */}
           {/* testing sections 1*/}
 
-          <section className='myteam py-80'>
+          <section className='pf-skills py-80'>
             <div className="container">
               <div className="row text-center">
                 <h2 className='text-dark'>PROFESSIONAL SKILLS</h2>
@@ -262,8 +261,8 @@ const SingleUser = () => {
                   <div key={_id}>
                     <div className="row align-items-center tm-row" onMouseOver={rowHover}>
                       <div className="col-5 name">
-                        <h2 className="normal">{sk_name}</h2>
-                        <h2 className="hovered">{sk_name}</h2>
+                        <h3 className="normal">{sk_name}</h3>
+                        <h3 className="hovered">{sk_name}</h3>
                       </div>
                       <div className="col-5 px-5"><p className='sktext'>{sk_desc}</p></div>
                       <div className="col-2"><p className='text-end'>{sk_pctage}</p></div>
@@ -275,7 +274,6 @@ const SingleUser = () => {
 
             </div>
           </section>
-          <hr />
           {/* ***************************************************************************** */}
           {/* ***************************************************************************** */}
 

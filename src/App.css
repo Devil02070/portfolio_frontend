@@ -311,29 +311,29 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 
 /* test  sections*/
 /* .myteam .tm-profile,.myteam .active h2.normal, .myteam h2.hovered{display:none;} */
-.myteam .sktext{display:none;}
+.pf-skills .sktext{display:none;}
 
-.myteam .name{overflow:hidden;height:50px}
-.myteam h2{transition:all .4s ease; font-size: 35px !important;color:#000000 !important}
-.myteam .active .name h2.normal{margin-top:-50px}
+.pf-skills .name{overflow:hidden;height:50px}
+.pf-skills h3{transition:all .4s ease; font-size: 35px !important;color:#000000 !important}
+.pf-skills .active .name h2.normal{margin-top:-50px}
 
-.myteam .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
-.myteam .sktext{position:absolute;bottom:-120px;width:25% !important; color: #000000 !important;}
-.myteam .sktext {
+.pf-skills .row{position:relative;padding:20px 0px;cursor: pointer; transition:all 1s ease}
+.pf-skills .sktext{position:absolute;bottom:-120px;width:25% !important; color: #000000 !important;}
+.pf-skills .sktext {
     background: #e5e5e5;
     padding: 30px;
     border-radius: 25px 0px 25px 0px;
 }
 
-.myteam .active .sktext{display:block;animation:slightmove .7s forwards !important;}
-.myteam .active h2.hovered{display:block; color:#8f2fb5 !important;}
-.myteam p{color:#8f2fb5}
+.pf-skills .active .sktext{display:block;animation:slightmove .7s forwards !important;}
+.pf-skills .active h2.hovered{display:block; color:#8f2fb5 !important;}
+.pf-skills p{color:#8f2fb5}
 .text-primary{color:#8f2fb5 !important}
 
-.my-team:hover .kursorChild.kursorChild--hidden{
+.pf-skills:hover .kursorChild.kursorChild--hidden{
 	background:#000000 !important;
 }
-.my-team:hover div[class*=kursor].kursor--4 {
+.pf-skills:hover div[class*=kursor].kursor--4 {
     border: 1px solid #000000 !important;
 }
 
@@ -343,16 +343,16 @@ body h1{font-size: 70px; z-index: 9999999 !important; text-transform: uppercase;
 }
 
 @media(max-width:500px){
-	.myteam .active .name h2.normal {
+	.pf-skills .active .name h2.normal {
 		margin-top: -32px;
 	}
-	.myteam h2 {
+	.pf-skills h3 {
 		font-size: 20px!important;
 	}
-	.myteam .name {
+	.pf-skills .name {
 		height: 20px;
 	}
-	.myteam .sktext {
+	.pf-skills .sktext {
 		background: #e5e5e5c4;
 		bottom: -45px;
 		right: 0px;
