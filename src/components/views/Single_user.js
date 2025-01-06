@@ -57,6 +57,7 @@ const SingleUser = () => {
         item.classList.remove('active')
       });
     })
+
   }
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const SingleUser = () => {
         <>
           <seciton className="loading-screen">
             <div className='vector text-center'>
-              <img src={loading} className='w-25 m-auto' />
+              <img src={loading} alt="hi" className='w-25 m-auto' />
             </div>
           </seciton>
         </>
@@ -276,8 +277,7 @@ const SingleUser = () => {
           </section>
           {/* ***************************************************************************** */}
           {/* ***************************************************************************** */}
-
-
+          {/* Work Section */}
           <section className='dark py-80 text-light mywork'>
             <div className="container">
               <div className="row text-center">

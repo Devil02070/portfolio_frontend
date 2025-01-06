@@ -10,9 +10,10 @@ import vector3 from '../../images/home-3.png';  //bottom-right
 const Home = () => {
 
   const [text, setText] = useState('');
-  const phrases = ["Welcome To My Portfolio App"];
+  
 
   useEffect(() => {
+    const phrases = ["Welcome To My Portfolio App"];
     let count = 0;
     let index = 0;
     let currentText = '';

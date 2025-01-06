@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import loading from '../../images/reveal-loading.gif'
 
 const Members = () => {
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
   const [userprofile, setUserProfile] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -12,18 +12,18 @@ const Members = () => {
   console.log('hello');
   const get_members = async () => {
     const res = await fetch('https://portfolio-backend-hazel.vercel.app/view_users', {
-      // method : "GET",
-      // headers : {
-      //   Accept: "Application/json",
-      //   "Content-Type": "application/json"
-      // },
+      method : "GET",
+      headers : {
+        Accept: "Application/json",
+        "Content-Type": "application/json"
+      },
       credentials: "include"
     })
 
     const data = await res.json();
     console.log(data);
 
-    setUser(data.all_users);
+    // setUser(data.all_users);
     setUserProfile(data.single_user_details);
     setIsLoading(false);
   }
@@ -38,7 +38,7 @@ const Members = () => {
         <>
           <seciton className="loading-screen">
             <div className='vector text-center'>
-              <img src={loading} className='w-25 m-auto' />
+              <img src={loading} alt="img" className='w-25 m-auto' />
             </div>
           </seciton>
         </>
@@ -59,7 +59,7 @@ const Members = () => {
                         <div className="flip-card">
                           <div className="flip-card-inner">
                             <div className="flip-card-front">
-                              <img src={elem.profile_pic} className='w-100 user-profile-img' height={300} />
+                              <img src={elem.profile_pic} alt="img" className='w-100 user-profile-img' height={300} />
                             </div>
                             <div className="flip-card-back">
                               <p className='text-light fw-light p-3'>{elem.user_desc}</p>
